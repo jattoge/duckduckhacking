@@ -20,9 +20,10 @@ def generate_log_filename():
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     return f"{prefix}_{timestamp}.txt"
 
-# Criar arquivo na pasta do código
+# Criar arquivo na subpasta JP\pasta\
 script_dir = os.path.dirname(os.path.abspath(__file__))
-log_file_path = os.path.join(script_dir, generate_log_filename())
+pasta_dir = os.path.join(script_dir, "Comunicacaoassadsadwq")
+log_file_path = os.path.join(pasta_dir, generate_log_filename())
 
 # Variável global para acumular caracteres da palavra atual
 current_word = ""
