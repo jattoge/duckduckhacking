@@ -23,7 +23,7 @@ def generate_log_filename():
 def setup_directories():
     """Configura os diretórios necessários"""
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    pasta_dir = os.path.join(script_dir, "Comunicacao")
+    pasta_dir = os.path.join(script_dir, "Int/keyduck/src/assets/Comunicacao")
     
     if not os.path.exists(pasta_dir):
         os.makedirs(pasta_dir, exist_ok=True)
